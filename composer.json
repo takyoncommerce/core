@@ -1,0 +1,28 @@
+{
+    "name": "takyoncommerce/module-core",
+    "description": "Core module for all Takyon Commerce modules",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Takyon Commerce",
+            "email": "contact@takyoncommerce.com",
+            "homepage": "https://takyoncommerce.com",
+            "role": "Developer"
+        }
+    ],
+    "version": "1.0.0",
+    "require": {
+        "php": "~8.1.0",
+        "magento/framework": "^103.0.4"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Takyon\\Core\\": ""
+        }
+    }
+}
+
