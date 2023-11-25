@@ -5,6 +5,8 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
+                <resource id="Takyon_Core::takyon_commerce" title="Takyon Commerce" sortOrder="110" />
+
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
