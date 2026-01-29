@@ -2,7 +2,7 @@
     "name": "takyoncommerce/module-core",
     "description": "Core module for all Takyon Commerce modules",
     "type": "magento2-module",
-    "license": "proprietary",
+    "license": "MIT",
     "authors": [
         {
             "name": "Takyon Commerce",
