@@ -18,6 +18,7 @@ class Meta extends Fieldset
         Js $jsHelper,
         private string $version,
         private string $documentationUrl,
+        private ?string $moduleCode = null,
         array $data = [],
         ?SecureHtmlRenderer $secureRenderer = null
     ) {
@@ -49,6 +50,19 @@ class Meta extends Fieldset
 
     private function getLinkHtml(Phrase $label, string $url): string
     {
-        return sprintf('<a href="%s" class="takyon-meta-fieldset__link">%s</a>', $url, $label);
+        $params = [
+            'utm_source' => 'magento_module',
+            'utm_medium' => 'store_configuration_meta'
+        ];
+
+        if ($this->moduleCode) {
+            $params['utm_campaign'] = $this->moduleCode;
+        }
+
+        return sprintf(
+            '<a href="%s" class="takyon-meta-fieldset__link">%s</a>',
+            $url . '?' . http_build_query($params),
+            $label
+        );
     }
 }

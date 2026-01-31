@@ -1,6 +1,11 @@
 {
     "name": "takyoncommerce/module-core",
     "description": "Core module for all Takyon Commerce modules",
+    "homepage": "https://takyoncommerce.com",
+    "keywords": [
+        "magento",
+        "magento2"
+    ],
     "type": "magento2-module",
     "license": "MIT",
     "authors": [
